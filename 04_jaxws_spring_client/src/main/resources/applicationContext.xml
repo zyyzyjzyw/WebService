@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jaxws="http://cxf.apache.org/jaxws"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
+    <!--Spring整合cxf客户端配置,关键点
+    1.服务地址:http://localhost:8081/ws/hello
+    2.服务接口类型
+    3.服务完整地址-->
+<jaxws:client id="helloService"
+              serviceClass="com.tedu.java.service.HelloService"
+              address="http://localhost:8081/ws/hello">
+
+</jaxws:client>
+</beans>

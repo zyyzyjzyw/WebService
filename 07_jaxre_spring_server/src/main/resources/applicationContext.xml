@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jaxws="http://cxf.apache.org/jaxws"
+       xmlns:jaxrs="http://cxf.apache.org/jaxws"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
+    <!--Spring整合cxf发布基于restful服务,关键点
+    1.服务地址
+    2.服务类
+    3.服务完整地址-->
+    <jaxrs:server address="/userService">
+        <jaxrs:serviceBean>
+            <bean class="com.tedu.java.service.impl.IUserServiceImpl"></bean>
+        </jaxrs:serviceBean>
+    </jaxrs:server>
+</beans>
